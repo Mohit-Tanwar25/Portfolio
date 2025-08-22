@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Tanwar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #3a86ff;
+            --dark: #2b2d42;
+            --light: #f8f9fa;
+            --accent: #8338ec;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        
+        /* Navigation Styles */
+        .navbar {
+            transition: all 0.3s ease;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 0.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+        }
+        
+        .hero-content {
+            z-index: 1;
+        }
+        
+        .hero-img {
+            animation: float 6s ease-in-out infinite;
+            padding-left: 50px;
+            max-width: 100%;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Skills Section */
+        .skills {
+            padding: 6rem 0;
+            background-color: var(--light);
+        }
+        
+        .skill-card {
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            background: white;
+            box-shadow: 0 5px 15px rgba(4, 253, 220, 0.148);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(231, 6, 6, 0.233);
+        }
+        
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        /* Projects Section */
+        .projects {
+            padding: 6rem 0;
+        }
+        
+        .project-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background-color: var(--light);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .social-icon {
+            font-size: 1.5rem;
+            margin: 0 0.75rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: var(--accent);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+                padding-top: 6rem;
+            }
+            
+            .hero-content {
+                margin-bottom: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-code-slash me-1"></i>DEV.portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold mb-3">
+                        Hi, I'm <span class="text-primary">Mohit Tanwar</span>
+                    </h1>
+                    <h2 class="display-5 text-muted mb-4">Frontend Developer</h2>
+                    <p class="lead mb-4">
+                        I build beautiful, responsive web applications with clean, efficient code and a focus on user experience.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#projects" class="btn btn-primary btn-lg px-5">
+                            <i class="bi bi-collection me-2"></i>View Work
+                        </a>
+                        <a href="https://www.dropbox.com/scl/fi/rgzavxyf5d3rks1g4ewug/Mohit_Tanwar-Resume.docx?rlkey=bbezj5o5zy5ydfsc2ixey6c7j&st=ef4nagqb&dl=0" class="btn btn-outline-primary btn-lg px-5">
+                            <i class="bi bi-file me-2">Resume</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://miro.medium.com/1*Uzwm7nVQR5zjhrpkkZ1pJA.png" alt="Frontend developer workspace with code editor open showing React components and designer tools" class="img-fluid hero-img mt-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">My <span class="text-primary">Skills</span></h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <i class="fa-brands fa-html5 fa-4x"></i>
+                        <h3>HTML</h3>
+                        <p>Semantic markup and accessibility focused development.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <i class="fa-brands fa-css fa-4x"></i>
+                        <h3>CSS</h3>
+                        <p>Modern styling with Flexbox, Grid and custom animations.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <i class="fa-brands fa-js fa-4x"></i>
+                        <h3>JavaScript</h3>
+                        <p>ES6+ features, DOM manipulation and modern frameworks.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <i class="fa-brands fa-java fa-4x"></i>
+                        <h3>Java</h3>
+                        <p>Component-based architecture with state management.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <i class="fa-solid fa-database fa-4x"></i>
+                        <h3>SQL</h3>
+                        <p>Structured Query Language for database management.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <i class="fa-brands fa-git-alt fa-4x"></i>
+                        <h3>Git</h3>
+                        <p>Version control workflow with GitHub and GitLab.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <i class="fa-brands fa-bootstrap fa-4x"></i>
+                        <h3>Bootstrap</h3>
+                        <p>Rapid responsive design implementation.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <i class="fa-solid fa-c og fa-4x"></i>
+                        <h3>C</h3>
+                        <p>Use to create apps and operating systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Featured <span class="text-primary">Projects</span></h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="Images/WhatsApp Image 2025-08-21 at 13.29.31_a5546676.jpg" class="card-img-top project-img" alt="E-commerce dashboard showing product analytics and user statistics">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Toll Tax Management</h5>
+                            <p class="card-text">We made a rfid scanner toll gate for make life better and its very time efficient.</p>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-primary me-2 mb-2">HTML</span>
+                                <span class="badge bg-primary me-2 mb-2">CSS</span>
+                                <span class="badge bg-primary me-2 mb-2">Arduino</span>
+                            </div>
+                            <div class="mt-3">
+                                <a href="https://smart-toll-management.netlify.app/" class="btn btn-outline-primary btn-sm">Live</a>
+                                <a href="https://github.com/Mohit-Tanwar25/Smart-Toll-Tax-Management" class="btn btn-outline-secondary btn-sm ms-2">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0373bd47-3b3d-46bf-a397-9f14d3095ec9.png" class="card-img-top project-img" alt="Social media platform with user profiles, posts and live notifications">
+                        <div class="card-body">
+                            <h5 class="card-title">Social Media Platform</h5>
+                            <p class="card-text">Connect with friends, share posts and react to content in real-time.</p>
+                            <div class="d-flex flex-wrap">
+                                <span class="badge bg-primary me-2 mb-2">React</span>
+                                <span class="badge bg-primary me-2 mb-2">GraphQL</span>
+                                <span class="badge bg-primary me-2 mb-2">WebSocket</span>
+                            </div>
+                            <div class="mt-3">
+                                <a href="#" class="btn btn-outline-primary btn-sm">Live Demo</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm ms-2">Code</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Get In <span class="text-primary">Touch</span></h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZfRmjwmTbXcsdwjBPXnCfPnvNGgRsBnXlMrSlfPdfZnwZCcwSJQQMSZcGhNMF" class="btn btn-primary w-100">
+    <i class="bi bi-send me-2"></i>Send Message
+</a>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <h3 class="mb-4">Let's Connect</h3>
+            <div class="d-flex justify-content-center mb-4">
+                <a href="https://github.com/Mohit-Tanwar25" class="social-icon"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/mohit-tanwar-48b210323/" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                <a href="https://x.com/xaphen_69" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/heyy.mohxit/" class="social-icon"><i class="bi bi-instagram"></i></a>
+            </div>
+            <p class="mb-0">© All rights reserved to Mohit Tanwar</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
