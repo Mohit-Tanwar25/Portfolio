@@ -8,7 +8,7 @@ It highlights the skills I have developed, the projects I have worked on, and th
 
 What You’ll Find Here
 
-About Me – A short introduction to my background and interests.
+About Me – A short introduction.
 
 Skills – Programming languages, tools, and technologies I work with.
 
