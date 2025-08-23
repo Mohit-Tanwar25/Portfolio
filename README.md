@@ -7,7 +7,6 @@ This portfolio represents my journey of **learning and growth** in the field of 
 
 It highlights the **skills I have developed**, the **projects I have worked on**, and the **knowledge I continue to expand**.  
 Through my work, I aim to combine **creativity 🎨** and **logic ⚙️** to build **efficient, user-friendly, and professional solutions**.  
-The Link is in Description.
 
 ---
 
